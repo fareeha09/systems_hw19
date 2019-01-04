@@ -77,9 +77,10 @@ int client_handshake(int *to_server) {
 	
 	//then sends back message that he received it
 	printf("[Client] message 'HOLA' received.. sending 'HOLA' back \n");
-	up = open("upstream", O_WRONLY);
 	write(up, ACK, HANDSHAKE_BUFFER_SIZE);
 
+	printf("up: %d\n", up);
+	
 	*to_server = up;
 	return down;
 }

@@ -7,7 +7,8 @@ int main() {
   int from_server;
 
   from_server = client_handshake( &to_server );
-  
+  printf("to server: %d, from_server: %d", to_server, from_server);
+
   printf("What do you want to send to the server?\n");
   char input[100];
   fgets(input, 100, stdin);
@@ -21,7 +22,7 @@ int main() {
   read(from_server, received, 100);
   
   //displays message to user
-  printf("[Client] %s\n", received);
+  printf("[Server] %s\n", received);
   sleep(1);
 }
 }
