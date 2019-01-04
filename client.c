@@ -21,6 +21,7 @@ int main() {
   read(from_server, received, 100);
   
   //displays message to user
-  printf("[Server] %s\n", received);
+  printf("[Client] %s\n", received);
+  sleep(1);
 }
 }
